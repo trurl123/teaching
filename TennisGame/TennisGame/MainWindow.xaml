@@ -1,0 +1,32 @@
+﻿<Window x:Class="TennisGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TennisGame"
+        mc:Ignorable="d"
+        Title="Super Tennis Game" Height="350" Width="525" KeyDown="Window_KeyDown" Initialized="Window_Initialized" SizeChanged="Window_SizeChanged" WindowStartupLocation="CenterScreen" KeyUp="Window_KeyUp" >
+	<Grid >
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+			<TextBlock Text="0" FontSize="20" HorizontalAlignment="Right" Padding="5" Name="LeftScore"></TextBlock>
+			<TextBlock Text=":" FontSize="20" HorizontalAlignment="Center" Padding="5"></TextBlock>
+			<TextBlock Text="0" FontSize="20" HorizontalAlignment="Left" Padding="5" Name="RightScore"></TextBlock>
+		</StackPanel>
+		<Canvas Name="Field" Grid.Row="1" Background="#FF9CE885" >
+			<Rectangle Width="10" Height="70" Fill="Black" Canvas.Left="10" Canvas.Top="40" Panel.ZIndex="-3" Name="LeftRacket">
+
+			</Rectangle>
+			<Rectangle Width="10" Height="70" Fill="Black" Canvas.Left="500" Canvas.Top="40" Panel.ZIndex="-3" Name="RightRacket">
+
+			</Rectangle>
+			<Rectangle Width="10" Height="10" Fill="Black" Canvas.Left="100" Canvas.Top="40" Panel.ZIndex="-3" Name="Ball">
+
+			</Rectangle>
+		</Canvas>
+	</Grid>
+</Window>
